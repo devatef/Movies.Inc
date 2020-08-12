@@ -10,8 +10,8 @@ import Foundation
 import Alamofire
 
 class HomeMovieRequest: APIRequest {
-    private var url:String="";
-    private var parameters:[String: Any]=[:]
+     var url:String="";
+     var parameters:[String: Any]=[:]
     
     required init(parms:[String:Any]) {
         url = appendSuffix(endpiont: EndPoints.NOW_PLAYING)

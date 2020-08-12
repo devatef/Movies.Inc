@@ -65,5 +65,19 @@ class HomeMoviesViewModel {
     
        }
     
-    
+    func fetchRecommendedMovies(movieId:Int) {
+           self._isFetching.accept(true)
+           self._error.accept(nil)
+           MovieRepo().loadRecommendedMovies(movieId: movieId).done {[weak self] movieModel in
+               self?._isFetching.accept(false)
+              let resultSorted = movieModel.results.sorted(by: { $0.title < $1.title })
+               self?._movies.accept(resultSorted)
+           }.catch{[weak self] error in
+               print(error)
+               self?._isFetching.accept(false)
+               self?._error.accept(error.localizedDescription)
+
+           }
+       
+          }
 }

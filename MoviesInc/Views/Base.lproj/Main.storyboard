@@ -197,6 +197,9 @@
                                 <state key="normal" title="show Recommended Movies">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="showRecommendedMovies" destination="FFT-bA-5xZ" eventType="touchUpInside" id="WBB-il-h00"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Press stars to rate :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fgY-d8-v18">
                                 <rect key="frame" x="20" y="515" width="148" height="20.5"/>
@@ -249,6 +252,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vf-or-1Ao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2526.0869565217395" y="109.82142857142857"/>
+        </scene>
+        <!--Recommended View Controller-->
+        <scene sceneID="9ZD-jj-NsR">
+            <objects>
+                <viewController storyboardIdentifier="RecommendedViewController" id="JQ7-a6-WOa" customClass="RecommendedViewController" customModule="MoviesInc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cag-Kf-Kv1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-w2-nsI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JQ7-a6-WOa" id="Nvk-AM-xmV"/>
+                                    <outlet property="delegate" destination="JQ7-a6-WOa" id="eIp-VR-mr7"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXv-Tg-qVI">
+                                <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4NI-w2-nsI" firstAttribute="top" secondItem="IpM-Ct-dEz" secondAttribute="top" id="4SF-ac-4Pm"/>
+                            <constraint firstItem="CXv-Tg-qVI" firstAttribute="centerY" secondItem="IpM-Ct-dEz" secondAttribute="centerY" id="HNm-yp-cR6"/>
+                            <constraint firstItem="4NI-w2-nsI" firstAttribute="leading" secondItem="IpM-Ct-dEz" secondAttribute="leading" id="IvP-Hb-X8s"/>
+                            <constraint firstItem="IpM-Ct-dEz" firstAttribute="bottom" secondItem="4NI-w2-nsI" secondAttribute="bottom" id="gTK-cl-Cgw"/>
+                            <constraint firstItem="CXv-Tg-qVI" firstAttribute="centerX" secondItem="IpM-Ct-dEz" secondAttribute="centerX" id="lg7-j9-gh7"/>
+                            <constraint firstItem="IpM-Ct-dEz" firstAttribute="trailing" secondItem="4NI-w2-nsI" secondAttribute="trailing" id="yRU-Lx-5Pm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IpM-Ct-dEz"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="CXv-Tg-qVI" id="SJN-3Q-19L"/>
+                        <outlet property="moviesTableView" destination="4NI-w2-nsI" id="gJ5-ET-4DG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYo-Hm-UCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3303" y="110"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Iiv-wL-JdV">

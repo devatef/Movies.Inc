@@ -28,7 +28,7 @@ class HomeMovieViewController: UIViewController {
     }
     
     
-    private func fetchMovies(){
+     func fetchMovies(){
         homeMovieViewModel.fetchMovies()
     }
     
@@ -64,6 +64,7 @@ class HomeMovieViewController: UIViewController {
         moviesTableView?.register(MovieCell.nib, forCellReuseIdentifier: MovieCell.identifier)
     }
     
+  
     
 }
 

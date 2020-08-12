@@ -103,15 +103,13 @@ class MovieDetailsViewController: UIViewController {
             isLoading ? HUD.show(.progress) : HUD.hide()
         }).disposed(by: disposeBag)
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+     @IBAction func showRecommendedMovies(){
+        let recommended =  self.storyboard?.instantiateViewController(withIdentifier: String(describing: RecommendedViewController.self)) as! RecommendedViewController
+        recommended.movieId = movieModel?.id
+        self.navigationController?.pushViewController(recommended, animated: true)
+        
+      }
     
 }
 

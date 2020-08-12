@@ -65,6 +65,34 @@ class MovieRepo {
          
      }
     
-    
+    func loadRecommendedMovies(movieId:Int) -> Promise<MoviesModel> {
+         
+         return Promise{ seal in
+            
+            let recomended = RecommendedMoviesRequest(parms: [:])
+            recomended.movieId = movieId
+            
+             NetworkHelper.shared.excuteRequest(urlRequest: recomended,
+                                          success: {data in
+                                             let jsonDecoder = JSONDecoder()
+                                             if let model = try? jsonDecoder.decode(MoviesModel.self, from: data) {
+                                                 seal.fulfill(model)
+                                             }else if let model = try? jsonDecoder.decode(LimitsError.self, from: data)
+                                             {
+                                                 seal.reject(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey:model.status_message]))
+                                             }
+                                             else{
+                                                 seal.reject(NSError(domain: "", code: -1, userInfo: nil))
+                                             }
+             },
+                                          failure: {error in
+                                             seal.reject(error)
+                                             
+             }
+             )
+             
+         }
+         
+     }
     
 }
