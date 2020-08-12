@@ -16,6 +16,7 @@
 		F07A4FD224E3578A00DC97D4 /* RateRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A4FD124E3578A00DC97D4 /* RateRepo.swift */; };
 		F0AECA5724E477A8003F7F70 /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AECA5624E477A8003F7F70 /* RecommendedViewController.swift */; };
 		F0AECA5924E47DC4003F7F70 /* RecommendedMoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AECA5824E47DC4003F7F70 /* RecommendedMoviesRequest.swift */; };
+		F0AECA5B24E482F1003F7F70 /* Dictionary+PostedParms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AECA5A24E482F1003F7F70 /* Dictionary+PostedParms.swift */; };
 		F0B7566824E08E8B006AD005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B7566724E08E8B006AD005 /* AppDelegate.swift */; };
 		F0B7566A24E08E8B006AD005 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B7566924E08E8B006AD005 /* SceneDelegate.swift */; };
 		F0B7566C24E08E8B006AD005 /* HomeMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B7566B24E08E8B006AD005 /* HomeMovieViewController.swift */; };
@@ -75,6 +76,7 @@
 		F07A4FD124E3578A00DC97D4 /* RateRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateRepo.swift; sourceTree = "<group>"; };
 		F0AECA5624E477A8003F7F70 /* RecommendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
 		F0AECA5824E47DC4003F7F70 /* RecommendedMoviesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedMoviesRequest.swift; sourceTree = "<group>"; };
+		F0AECA5A24E482F1003F7F70 /* Dictionary+PostedParms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+PostedParms.swift"; sourceTree = "<group>"; };
 		F0B7566424E08E8B006AD005 /* MoviesInc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesInc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B7566724E08E8B006AD005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0B7566924E08E8B006AD005 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,17 +185,17 @@
 		F0B7566624E08E8B006AD005 /* MoviesInc */ = {
 			isa = PBXGroup;
 			children = (
-				F0B756A124E0939F006AD005 /* Network */,
-				F0B756A024E09385006AD005 /* NetworkRequests */,
-				F0B7569F24E09379006AD005 /* Models */,
+				F0B7569B24E09348006AD005 /* AppDelegate */,
 				F0B7569E24E09370006AD005 /* Controllers */,
 				F0B7569D24E09363006AD005 /* Views */,
 				F0B7569C24E0935B006AD005 /* ViewModels */,
-				F0B7569B24E09348006AD005 /* AppDelegate */,
-				F0B7569A24E09340006AD005 /* Resources */,
-				F0B7569924E09337006AD005 /* Extensions */,
+				F0B7569F24E09379006AD005 /* Models */,
 				F0B7569824E0932E006AD005 /* Repos */,
+				F0B756A124E0939F006AD005 /* Network */,
+				F0B756A024E09385006AD005 /* NetworkRequests */,
 				F0B7569724E09325006AD005 /* Utils */,
+				F0B7569924E09337006AD005 /* Extensions */,
+				F0B7569A24E09340006AD005 /* Resources */,
 				F0B7567524E08E8F006AD005 /* Info.plist */,
 			);
 			path = MoviesInc;
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				F0C0943124E1DADC007B891D /* Cell+Identefier.swift */,
+				F0AECA5A24E482F1003F7F70 /* Dictionary+PostedParms.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				F0B756A824E0A4F3006AD005 /* BaseRequest.swift in Sources */,
 				F0B756B024E0A6FC006AD005 /* NetworkHelper.swift in Sources */,
 				F0B756B424E0AF56006AD005 /* MovieRepo.swift in Sources */,
+				F0AECA5B24E482F1003F7F70 /* Dictionary+PostedParms.swift in Sources */,
 				F0AECA5724E477A8003F7F70 /* RecommendedViewController.swift in Sources */,
 				F0DEEE1D24E2047E00A9859F /* MovieDetailsModel.swift in Sources */,
 				F07A4FD224E3578A00DC97D4 /* RateRepo.swift in Sources */,
