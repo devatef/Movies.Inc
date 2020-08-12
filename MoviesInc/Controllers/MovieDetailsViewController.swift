@@ -37,6 +37,7 @@ class MovieDetailsViewController: UIViewController {
         fetchMovieDetails()
     }
     
+    // bind UI with passed data
     func fillUI()  {
         self.title = movieModel?.title
         ratingLabel.text = "\(movieModel?.vote_average ?? 0 )"
@@ -45,7 +46,7 @@ class MovieDetailsViewController: UIViewController {
         releaseYearLabel.text = movieModel?.release_date.components(separatedBy: "-").first
     }
     
-    
+    // setup rating view
     func configureRatingView() {
         cosmosViewRatingView.rating = (movieModel?.vote_average ?? 0)/2
         cosmosViewRatingView.didFinishTouchingCosmos = {[weak self] rating in
@@ -62,10 +63,12 @@ class MovieDetailsViewController: UIViewController {
         }
     }
     
+    // load details from server
     private func fetchMovieDetails(){
         movieDetailsViewModel.fetchMovieDetails(movieId: movieModel?.id ?? 0)
     }
     
+    // bind modelview with UI
     private func setupMovieViewModel(){
         
         movieDetailsViewModel = MovieDetailsViewModel()
@@ -104,6 +107,7 @@ class MovieDetailsViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+ // show recommended moview
      @IBAction func showRecommendedMovies(){
         let recommended =  self.storyboard?.instantiateViewController(withIdentifier: String(describing: RecommendedViewController.self)) as! RecommendedViewController
         recommended.movieId = movieModel?.id

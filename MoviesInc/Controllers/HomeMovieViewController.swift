@@ -28,10 +28,12 @@ class HomeMovieViewController: UIViewController {
     }
     
     
+    // load Movies from backend
      func fetchMovies(){
         homeMovieViewModel.fetchMovies()
     }
     
+    // bind viewmodel with UI
     private func setupMovieViewModel(){
         
         homeMovieViewModel = HomeMoviesViewModel()
@@ -59,6 +61,7 @@ class HomeMovieViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+    // register nib for table
     private func setupTableView() {
         moviesTableView.rowHeight = 100
         moviesTableView?.register(MovieCell.nib, forCellReuseIdentifier: MovieCell.identifier)

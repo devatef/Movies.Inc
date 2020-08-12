@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//https://api.themoviedb.org/3/authentication/guest_session/new?api_key=22b0de11884a4aeba3ce3a7991b42c42
 import Alamofire
 
 class GuestSessionRequest: APIRequest {

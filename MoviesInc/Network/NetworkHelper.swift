@@ -17,7 +17,6 @@ class NetworkHelper {
     func excuteRequest(urlRequest:APIRequest,
                  success:@escaping (Data) -> Void,
                  failure:@escaping (Error)->Void){
-        print(urlRequest.urlRequest().url?.absoluteString)
             AF.request(urlRequest.urlRequest()).validate().responseData{ (response) in
                 switch response.result{
                 case .failure(let e):
