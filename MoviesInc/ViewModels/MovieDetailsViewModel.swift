@@ -39,6 +39,10 @@ class MovieDetailsViewModel {
         return _rate.asDriver()
     }
     
+    var rateStatusCode: Int?{
+          return _rate.value?.status_code
+     }
+    
     var error: Driver<String?> {
         return _error.asDriver()
     }

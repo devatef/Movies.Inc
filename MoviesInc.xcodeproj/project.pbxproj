@@ -14,6 +14,9 @@
 		F07A4FCE24E34DC800DC97D4 /* GuestSessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A4FCD24E34DC800DC97D4 /* GuestSessionRequest.swift */; };
 		F07A4FD024E356D100DC97D4 /* GuestSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A4FCF24E356D100DC97D4 /* GuestSessionModel.swift */; };
 		F07A4FD224E3578A00DC97D4 /* RateRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07A4FD124E3578A00DC97D4 /* RateRepo.swift */; };
+		F089DAAF24EAE606004E63FC /* MovieRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089DAAC24EAE606004E63FC /* MovieRepoTests.swift */; };
+		F089DAB024EAE606004E63FC /* MovieDetailsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089DAAD24EAE606004E63FC /* MovieDetailsViewModelTest.swift */; };
+		F089DAB124EAE606004E63FC /* NetworkHelperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F089DAAE24EAE606004E63FC /* NetworkHelperTest.swift */; };
 		F0AECA5724E477A8003F7F70 /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AECA5624E477A8003F7F70 /* RecommendedViewController.swift */; };
 		F0AECA5924E47DC4003F7F70 /* RecommendedMoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AECA5824E47DC4003F7F70 /* RecommendedMoviesRequest.swift */; };
 		F0AECA5B24E482F1003F7F70 /* Dictionary+PostedParms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AECA5A24E482F1003F7F70 /* Dictionary+PostedParms.swift */; };
@@ -74,6 +77,9 @@
 		F07A4FCD24E34DC800DC97D4 /* GuestSessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSessionRequest.swift; sourceTree = "<group>"; };
 		F07A4FCF24E356D100DC97D4 /* GuestSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSessionModel.swift; sourceTree = "<group>"; };
 		F07A4FD124E3578A00DC97D4 /* RateRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateRepo.swift; sourceTree = "<group>"; };
+		F089DAAC24EAE606004E63FC /* MovieRepoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRepoTests.swift; sourceTree = "<group>"; };
+		F089DAAD24EAE606004E63FC /* MovieDetailsViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModelTest.swift; sourceTree = "<group>"; };
+		F089DAAE24EAE606004E63FC /* NetworkHelperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelperTest.swift; sourceTree = "<group>"; };
 		F0AECA5624E477A8003F7F70 /* RecommendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
 		F0AECA5824E47DC4003F7F70 /* RecommendedMoviesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedMoviesRequest.swift; sourceTree = "<group>"; };
 		F0AECA5A24E482F1003F7F70 /* Dictionary+PostedParms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+PostedParms.swift"; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 		F0B7567D24E08E8F006AD005 /* MoviesIncTests */ = {
 			isa = PBXGroup;
 			children = (
+				F089DAAD24EAE606004E63FC /* MovieDetailsViewModelTest.swift */,
+				F089DAAC24EAE606004E63FC /* MovieRepoTests.swift */,
+				F089DAAE24EAE606004E63FC /* NetworkHelperTest.swift */,
 				F0B7567E24E08E8F006AD005 /* MoviesIncTests.swift */,
 				F0B7568024E08E8F006AD005 /* Info.plist */,
 			);
@@ -613,6 +622,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F089DAB124EAE606004E63FC /* NetworkHelperTest.swift in Sources */,
+				F089DAAF24EAE606004E63FC /* MovieRepoTests.swift in Sources */,
+				F089DAB024EAE606004E63FC /* MovieDetailsViewModelTest.swift in Sources */,
 				F0B7567F24E08E8F006AD005 /* MoviesIncTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
